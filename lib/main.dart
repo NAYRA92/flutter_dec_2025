@@ -4,6 +4,7 @@ import 'package:flutter_application_2912/water_drop_example.dart';
 
 import 'homepage3112.dart';
 import 'instagram_home_page.dart';
+import 'test_onboarding.dart';
 import 'useful_widgets.dart';
 
 void main() {
@@ -25,8 +26,8 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 183, 58, 58)),
       ),
       home: 
-      WaterDropExample()
-      // InstagramHomePage()
+      // WaterDropExample()
+      TestOnboarding()
       // Homepage3112()
       //HomePage(),
     );
