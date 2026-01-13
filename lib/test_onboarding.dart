@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'app_theme.dart';
+
 
 class TestOnboarding extends StatefulWidget {
   const TestOnboarding({super.key});
@@ -12,6 +14,7 @@ class _TestOnboardingState extends State<TestOnboarding> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[50],
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -23,10 +26,8 @@ class _TestOnboardingState extends State<TestOnboarding> {
                   radius: 50,
                 ),
                 Text("Food Bank",
-                style: TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.bold
-                ),),
+                style: kHeaderDarkTextStyle
+                ),
                         
                 Text("Special & Delisious",
                 style: TextStyle(
@@ -38,28 +39,17 @@ class _TestOnboardingState extends State<TestOnboarding> {
         
             Column(
               children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.deepOrange,
-                        
-                  ),
-                onPressed: (){}, 
-                child: Text("Log In")),
+             kPrimaryButton("Log In", (){}),
+             kPrimaryButton("Sign Up", (){}),
 
-                SizedBox(height: 10,),
                         
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey
-                  ),
-                onPressed: (){}, 
-                child: Text("Sign Up")),
+              
               ],
             ),
         
             ClipRRect(
               borderRadius: BorderRadius.circular(25),
-              child: Image.asset("images/kids.jpg", height: 250, width: 250, fit: BoxFit.cover,))
+              child: Image.asset("images/kids.jpg", height: 250, width: 350, fit: BoxFit.cover,))
           ],
         ),
       ),
