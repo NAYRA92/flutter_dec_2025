@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 
 
@@ -49,3 +50,10 @@ Function() fn
                 child: Text(text,
                 style: kTitleLightTextStyle,));
 }
+=======
+import 'package:flutter/material.dart';
+
+
+const Color kPrimaryColor = Color(0xfffb8500);
+const Color kSecondaryColor = Color(0xff023047);
+>>>>>>> e9e5d0d (	modified:   .gitignore)

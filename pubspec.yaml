@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   water_drop_nav_bar: ^2.2.2
   floating_bottom_navigation_bar: ^1.5.2
+  lottie:
+  firebase_core:
+  cloud_firestore:
   # google_fonts:
 
 dev_dependencies:

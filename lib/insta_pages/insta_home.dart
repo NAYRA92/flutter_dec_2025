@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class InstaHome extends StatefulWidget {
@@ -8,11 +9,54 @@ class InstaHome extends StatefulWidget {
 }
 
 class _InstaHomeState extends State<InstaHome> {
+  TextEditingController _imageUrl = TextEditingController();
+  TextEditingController _username = TextEditingController();
+  TextEditingController _caption = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.add),
+        leading: IconButton(
+          onPressed: (){
+            showDialog(
+              context: context, 
+              builder: (context){
+                return Dialog(
+                  child: Container(
+                    height: 300,
+                    width: 300,
+                    child: Column(
+                      children: [
+                        TextFormField(
+                          controller: _imageUrl,
+                        ),
+                        TextFormField(
+                          controller: _username,
+                        ),
+                        TextFormField(
+                          controller: _caption,
+                        ),
+                        ElevatedButton(
+                          onPressed: () async {
+                           await FirebaseFirestore
+                            .instance
+                            .collection("posts")
+                            .add({
+                              'imageUrl': _imageUrl.text,
+                              'userName': _username.text,
+                              'caption': _caption.text,
+                            });
+                            Navigator.pop(context);
+                          }, 
+                          child: Text("Add Post"))
+                      ],
+                    ),
+                  ),
+                );
+              });
+          }, 
+          icon: Icon(Icons.add)),
         title: Image.asset('images/Instagram_logo.png', height: 40),
         actions: [Icon(Icons.favorite_outline_outlined)],
       ),
@@ -32,7 +76,9 @@ class _InstaHomeState extends State<InstaHome> {
 
           // Content List View
           Expanded(
-            child: ListView.builder(
+            child: 
+            // StreamBuilder(stream: stream, builder: builder)
+            ListView.builder(
               itemCount: 25,
               itemBuilder: (context, index) {
                 return Container(
