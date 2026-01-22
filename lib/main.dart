@@ -122,6 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 =======
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2912/firebase_crud.dart';
 import 'package:flutter_application_2912/login_page.dart';
 import 'insta_pages/insta_profile.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -160,8 +161,9 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 183, 58, 58)),
       ),
       home: 
+      FirebaseCrud()
       // LoginPage()
-      InstagramHomePage()
+      // InstagramHomePage()
       // Homepage3112()
       //HomePage(),
     );
