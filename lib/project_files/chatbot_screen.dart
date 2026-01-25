@@ -27,9 +27,9 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
   TextEditingController _chatMessage = TextEditingController();
 
   Future<void> _generateChatResponse () async {
-
     final messageContent = Content.text("Give Me A Morning Msg.");
     final modelChat = chatModel.startChat();
+    
     final modelResponse = await modelChat.sendMessage(messageContent);
     print(modelResponse.text);
 
