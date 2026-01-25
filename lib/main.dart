@@ -1,13 +1,10 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2912/drawer_page.dart';
-import 'package:flutter_application_2912/firebase_crud.dart';
-import 'package:flutter_application_2912/login_page.dart';
-import 'insta_pages/insta_profile.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_application_2912/project_files/splash_screen.dart';
 
-import 'instagram_home_page.dart';
-import 'signup_page.dart';
+import 'project_files/chatbot_screen.dart';
+
 
 // void main() {
 //   runApp(const MyApp());
@@ -15,13 +12,13 @@ import 'signup_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp( //unerror will appear here, but it will go as soon as you import the needed Firebase packages
-      options: FirebaseOptions(
-          apiKey: "AIzaSyB77wgkvyKai00zplrrOyhMjrwWksBueTY", //you will find apiKey, appId ... etc indside the google-services.json file that you download from firebase console!
-          appId: "1:240884248502:web:69e0d9ae380ef7c30f5b17",
-          messagingSenderId: "sendid",
-          projectId: "dec-project-89e0b",
-          storageBucket: "dec-project-89e0b.firebasestorage.app")); 
+  // await Firebase.initializeApp( //unerror will appear here, but it will go as soon as you import the needed Firebase packages
+  //     options: FirebaseOptions(
+  //         apiKey: "AIzaSyB77wgkvyKai00zplrrOyhMjrwWksBueTY", //you will find apiKey, appId ... etc indside the google-services.json file that you download from firebase console!
+  //         appId: "1:240884248502:web:69e0d9ae380ef7c30f5b17",
+  //         messagingSenderId: "sendid",
+  //         projectId: "dec-project-89e0b",
+  //         storageBucket: "dec-project-89e0b.firebasestorage.app")); 
   runApp(const MyApp());
 }
 
@@ -40,7 +37,7 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 183, 58, 58)),
       ),
       home: 
-      DrawerPage()
+      ChatbotScreen()
       // LoginPage()
       // InstagramHomePage()
       // Homepage3112()

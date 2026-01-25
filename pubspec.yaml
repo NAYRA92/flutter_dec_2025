@@ -39,6 +39,7 @@ dependencies:
   lottie:
   firebase_core:
   cloud_firestore:
+  google_generative_ai: 
   # google_fonts:
 
 dev_dependencies:
