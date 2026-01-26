@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2912/project_files/chatbot_screen.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -7,6 +8,21 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // To Open ChatBot
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          showDialog(
+            context: context, 
+            builder: (context){
+              return AlertDialog(
+                content:  ChatbotScreen()
+              );
+              // ChatbotScreen();
+            });
+        },
+        child: Icon(Icons.rocket),
+        ),
+      ///end
       backgroundColor: Colors.lightGreen[700],
       appBar: AppBar(
         title: Text("Hello"),
