@@ -40,6 +40,12 @@ dependencies:
   firebase_core:
   cloud_firestore:
   google_generative_ai: 
+  mobile_scanner:
+  permission_handler:
+  image_picker:
+  google_maps_flutter:
+  intl_phone_field:
+
   # google_fonts:
 
 dev_dependencies:

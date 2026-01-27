@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2912/project_files/home_screen.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -16,7 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection: TextDirection.rtl,
+      textDirection: TextDirection.ltr,
       child: Scaffold(
         body: Container(
           // decoration: BoxDecoration(
@@ -29,8 +30,11 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             children: [
               Image.asset('images/logo.png', height: 100,),
-              TextFormField(
-                controller: _mobile,
+              // TextFormField(
+              //   controller: _mobile,
+              // ),
+              IntlPhoneField(
+                initialCountryCode: "YE",
               ),
               TextFormField(
                 controller: _password,

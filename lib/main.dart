@@ -2,6 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_application_2912/homepage.dart';
+import 'package:flutter_application_2912/project_files/google_maps_screen.dart';
+import 'package:flutter_application_2912/project_files/login_screen.dart';
+import 'package:flutter_application_2912/project_files/qr_code_reader_screen.dart';
 import 'package:flutter_application_2912/project_files/splash_screen.dart';
 
 import 'project_files/chatbot_screen.dart';
@@ -37,12 +40,14 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color.fromARGB(255, 183, 58, 58)),
       ),
-      home: 
+      home: LoginScreen()
+      // MapSample(),
+      // MobileScannerSimple(),
       // ChatbotScreen()
       // LoginPage()
       // InstagramHomePage()
       // Homepage3112()
-      HomePage(),
+      // HomePage(),
     );
   }
 }
