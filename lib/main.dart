@@ -7,7 +7,9 @@ import 'package:flutter_application_2912/project_files/login_screen.dart';
 import 'package:flutter_application_2912/project_files/qr_code_reader_screen.dart';
 import 'package:flutter_application_2912/project_files/splash_screen.dart';
 
+import 'challenges/challenge_one.dart';
 import 'project_files/chatbot_screen.dart';
+import 'project_files/get_api_data.dart';
 
 
 // void main() {
@@ -40,7 +42,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color.fromARGB(255, 183, 58, 58)),
       ),
-      home: LoginScreen()
+      home: GetApiData()
       // MapSample(),
       // MobileScannerSimple(),
       // ChatbotScreen()

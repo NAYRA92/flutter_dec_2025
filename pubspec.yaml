@@ -45,6 +45,7 @@ dependencies:
   image_picker:
   google_maps_flutter:
   intl_phone_field:
+  http:
 
   # google_fonts:
 
