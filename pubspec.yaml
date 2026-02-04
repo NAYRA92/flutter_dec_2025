@@ -46,6 +46,9 @@ dependencies:
   google_maps_flutter:
   intl_phone_field:
   http:
+  animated_text_kit:
+  flutter_animate:
+  introduction_screen:
 
   # google_fonts:
 

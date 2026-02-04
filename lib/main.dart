@@ -8,6 +8,8 @@ import 'package:flutter_application_2912/project_files/qr_code_reader_screen.dar
 import 'package:flutter_application_2912/project_files/splash_screen.dart';
 
 import 'challenges/challenge_one.dart';
+import 'dev_widgets.dart';
+import 'page_viewer_code.dart';
 import 'project_files/chatbot_screen.dart';
 import 'project_files/get_api_data.dart';
 
@@ -42,7 +44,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color.fromARGB(255, 183, 58, 58)),
       ),
-      home: GetApiData()
+      home: 
+      PageViewExampleApp()
+      // DevWidgets()
       // MapSample(),
       // MobileScannerSimple(),
       // ChatbotScreen()
